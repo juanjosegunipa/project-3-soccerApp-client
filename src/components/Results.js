@@ -6,7 +6,7 @@ function Results() {
     const [results, setResults] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/results')
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/results`)
             .then(axiosRes => {
                 const groupNames = axiosRes.data.matches.reduce((a, c) => {
                     if (c.stage === 'GROUP_STAGE' && !a.includes(c.group)) a.push(c.group);

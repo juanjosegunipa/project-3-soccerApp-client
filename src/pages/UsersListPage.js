@@ -8,7 +8,7 @@ function UserListPage() {
     const [usersArray, setUserArray] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/users')
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/users`)
             .then(res => setUserArray(res.data.foundUsersArray))
             .catch(err => console.log(err))
     }, [])

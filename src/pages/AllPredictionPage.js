@@ -9,7 +9,7 @@ function SinglePredictions() {
     const [prediction, setPrediction] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/prediction/${predictionId}`)
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/prediction/${predictionId}`)
             .then(res => setPrediction(res.data.groups))
             .catch(err => console.log(err))
     }, [predictionId])

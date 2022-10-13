@@ -11,7 +11,7 @@ function HomePage() {
     const { user } = useContext(AuthContext)
 
     useEffect(() => {
-        axios.get('http://localhost:3001/')
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/`)
             .then(res => setUserArray(res.data.foundUsersArray))
             .catch(err => console.log(err))
     }, [])

@@ -27,7 +27,7 @@ function PredictionFormCopy() {
         event.preventDefault();
         const copyState = { ...state }
         Object.keys(copyState).forEach(key => copyState[key].forEach(match => delete match.group));
-        axios.post('http://localhost:3001/prediction', copyState, {
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/prediction`, copyState, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('authToken')}`
             }
@@ -47,7 +47,7 @@ function PredictionFormCopy() {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:3001/matches/all')
+        axios.get(`${process.env.REACT_APP_BACKEND_URL}/matches/all`)
             .then(axiosRes => {
                 const groupNames = axiosRes.data.matches.reduce((a, c) => {
                     if (c.stage === 'GROUP_STAGE' && !a.includes(c.group)) a.push(c.group);
