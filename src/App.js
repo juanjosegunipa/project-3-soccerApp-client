@@ -18,6 +18,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      {message && <p style={{ color: 'red' }}>{message}</p>}
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/login' element={<LoginPage />} />
@@ -27,7 +28,6 @@ function App() {
         <Route path='/prediction/:predictionId' element={<SinglePredictions />} />
         <Route path='/results' element={<Results />} />
       </Routes>
-      {message && <p style={{ color: 'red' }}>{message}</p>}
     </div>
   );
 }

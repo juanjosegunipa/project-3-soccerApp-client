@@ -29,7 +29,8 @@ function LoginPage() {
             })
             .catch(err => {
                 console.log(err)
-                setMessage(err.response.data.error)
+                setMessage('invalid username or password')
+                setInterval(() => setMessage(''), 30000)
             })
     }
 

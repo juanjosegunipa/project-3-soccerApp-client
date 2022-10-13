@@ -33,7 +33,8 @@ function SignupPage() {
             })
             .catch(err => {
                 console.log(err)
-                setMessage(err.response.data.message)
+                setMessage('username already exists')
+                setInterval(() => setMessage(''), 30000)
             })
     }
 
