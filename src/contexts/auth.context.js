@@ -20,7 +20,7 @@ function AuthProvider({ children }) {
         const storedToken = localStorage.getItem('authToken')
         if (storeToken) {
 
-            axios.get(`${process.env.REACT_APP_BACKEND_URL}verify`, {
+            axios.get(`${process.env.REACT_APP_BACKEND_URL}/verify`, {
                 headers: {
                     authorization: `Bearer ${storedToken}`
                 }
