@@ -20,7 +20,7 @@ function HomePage() {
             {user && (
                 <>
                     <p>hey, {user.firstName}!</p>
-                    <p>You have {user.points} points</p>
+                    {/* <p>You have {user.points} points</p> */}
                 </>
             )}
             <h1>Soccer pool</h1>

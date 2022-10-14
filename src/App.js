@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {message && <p style={{ color: 'red' }}>{message}</p>}
+      {message && <p style={{ color: 'blue' }}>{message}</p>}
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/login' element={<LoginPage />} />
