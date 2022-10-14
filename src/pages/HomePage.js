@@ -19,12 +19,12 @@ function HomePage() {
         <>
             {user && (
                 <>
-                    <p>hey, {user.firstName}!</p>
+                    <p style={{ color: 'white' }}>hey, {user.firstName}!</p>
                     {/* <p>You have {user.points} points</p> */}
                 </>
             )}
-            <h1>Soccer pool</h1>
-            <h2>In this page you can guess all the results of the soccer World Cup games, the user with the most points wins.</h2>
+            <h1 style={{ color: 'white' }}>Soccer pool</h1>
+            <h2 style={{ color: 'white' }}>In this page you can guess all the results of the soccer World Cup games, the user with the most points wins.</h2>
             {/* {usersArray.map(e => {
                 return (
                     <div>
