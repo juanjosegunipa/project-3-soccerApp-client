@@ -16,11 +16,10 @@ function UserListPage() {
 
     return (
         <div>
-            <h1>Click on any user to see their predictions</h1>
             {usersArray.map(e => {
                 return (
                     <div>
-                        <h2>{e.firstName} {e.lastName} Points: {e.points} <Link to={`/prediction/${e.prediction}`}>Predictions</Link></h2>
+                        <h2 style={{ color: 'white' }}>{e.firstName} {e.lastName}'s <Link to={`/prediction/${e.prediction}`} style={{ color: 'white' }}>Predictions</Link></h2>
                     </div>
                 );
             })}

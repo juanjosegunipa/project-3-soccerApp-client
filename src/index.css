@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(114, 47, 55);
 }
 
 code {
@@ -20,7 +21,7 @@ code {
 }
 
 .single-group {
-  border: 1px solid black;
+  border: 1px solid white;
   margin: 5px;
   border-radius: 20px;
   padding: 10px;
@@ -34,4 +35,84 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+nav {
+  background-color: black;
+  padding: 20px;
+}
+
+.nav-element {
+  color: white;
+  text-decoration: none;
+  border: none;
+  background-color: black;
+}
+
+.wrapper {
+  width: 330px;
+  padding: 2rem 1rem;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #07001f;
+  margin-bottom: 1.2rem;
+}
+
+.auth-form input {
+  width: 92%;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background: #e4e4e4;
+}
+
+.auth-button {
+  font-size: 1rem;
+  margin-top: 1.8rem;
+  padding: 10px 0px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  width: 90%;
+  cursor: pointer;
+  background: rgb(17, 107, 143);
+  color: #fff;
+}
+
+.auth-button:hover {
+  background: rgba(17, 107, 143, 0.8);
+}
+
+input:focus {
+  border: 1px solid rgb(193, 192, 192);
+}
+
+.member {
+  font-size: 0.8rem;
+  margin-top: 1.4rem;
+  color: #636363;
+}
+
+.auth-link {
+  color: rgb(17, 107, 143);
+  text-decoration: none;
+}
+
+.pre-input {
+  width: 5%;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 5px 5px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background: #e4e4e4;
 }

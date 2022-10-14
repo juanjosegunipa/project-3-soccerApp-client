@@ -77,16 +77,16 @@ function PredictionFormCopy() {
                     Object.keys(state).sort((a, b) => a.localeCompare(b)).map(k => {
                         return (
                             <div className='single-group'>
-                                <div>{state[k][0].group.split('_').join(' ')}</div>
+                                <div style={{ color: 'white', marginBottom: '10px' }}>{state[k][0].group.split('_').join(' ')}</div>
                                 {
                                     state[k].map((e, i) => {
                                         return (
                                             <form style={{ marginBottom: '50px' }}>
-                                                <label> {e.homeTeam.name} </label>
-                                                <input type='number' name='homeTeam' style={{ width: '3%' }} value={state[k][i].score.homeTeam} onChange={updateState(k)(i)} />
-                                                <span> vs </span>
-                                                <input type='number' name='awayTeam' style={{ width: '3%' }} value={state[k][i].score.awayTeam} onChange={updateState(k)(i)} />
-                                                <label> {e.awayTeam.name} </label>
+                                                <label style={{ color: 'white' }}> {e.homeTeam.name} </label>
+                                                <input type='number' name='homeTeam' className='pre-input' value={state[k][i].score.homeTeam} onChange={updateState(k)(i)} />
+                                                <span style={{ color: 'white' }}> vs </span>
+                                                <input type='number' name='awayTeam' className='pre-input' value={state[k][i].score.awayTeam} onChange={updateState(k)(i)} />
+                                                <label style={{ color: 'white' }}> {e.awayTeam.name} </label>
                                             </form>
                                         );
                                     })
@@ -97,7 +97,7 @@ function PredictionFormCopy() {
                 }
 
             </div>
-            <button onClick={handleSubmit}>Submit predictions</button>
+            <button onClick={handleSubmit} className='auth-button' style={{ width: '10%' }}>Submit predictions</button>
         </>
     )
 }

@@ -21,12 +21,12 @@ function SinglePredictions() {
                 prediction.map(e => {
                     return (
                         <div className='single-group '>
-                            <h2 >Group {e.groupName}</h2>
+                            <h2 style={{ color: 'white' }}>Group {e.groupName}</h2>
                             {
                                 e.matches.map(m => {
                                     return (
                                         <>
-                                            <h3>{m.homeTeam.name} {m.score.homeTeam} vs {m.score.awayTeam} {m.awayTeam.name}</h3>
+                                            <h3 style={{ color: 'white' }}>{m.homeTeam.name} {m.score.homeTeam} vs {m.score.awayTeam} {m.awayTeam.name}</h3>
                                         </>
                                     );
                                 })

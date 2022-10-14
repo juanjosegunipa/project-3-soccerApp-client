@@ -39,46 +39,53 @@ function SignupPage() {
     }
 
     return (
-        <div>
+        <div className='wrapper'>
             <h2>Sign Up</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='auth-form'>
                 <div>
-                    <label>First Name</label>
+                    {/* <label>First Name</label> */}
                     <input
                         name='firstName'
                         value={state.firstName}
                         onChange={updateState}
+                        placeholder='First Name'
                     />
                 </div>
                 <div>
-                    <label>Last Name</label>
+                    {/* <label>Last Name</label> */}
                     <input
                         name='lastName'
                         value={state.lastName}
                         onChange={updateState}
+                        placeholder='Last Name'
                     />
                 </div>
                 <div>
-                    <label>Username</label>
+                    {/* <label>Username</label> */}
                     <input
                         name='username'
                         value={state.username}
                         onChange={updateState}
+                        placeholder='username'
                     />
                 </div>
                 <div>
-                    <label>Password</label>
+                    {/* <label>Password</label> */}
                     <input
                         name='password'
                         type='password'
                         value={state.password}
                         onChange={updateState}
+                        placeholder='password'
                     />
                 </div>
                 <div>
-                    <button>Sign Up!</button>
+                    <button className='auth-button'>Sign Up!</button>
                 </div>
-                <Link to={'/login'}>Log In</Link>
+                <div className='member'>
+                    <p>Already have an account? <Link to={'/login'} className='auth-link'>Log In</Link></p>
+                </div>
+
             </form>
         </div>
     );

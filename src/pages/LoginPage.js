@@ -35,30 +35,35 @@ function LoginPage() {
     }
 
     return (
-        <div>
-            <h2>Log in</h2>
-            <form onSubmit={handleSubmit}>
+        <div className='wrapper'>
+            <h1>Log in</h1>
+            <form onSubmit={handleSubmit} className='auth-form'>
                 <div>
-                    <label>Username</label>
+                    {/* <label>Username</label> */}
                     <input
                         name='username'
                         value={state.username}
                         onChange={updateState}
+                        placeholder='username'
                     />
                 </div>
                 <div>
-                    <label>Password</label>
+                    {/* <label>Password</label> */}
                     <input
                         name='password'
                         type='password'
                         value={state.password}
                         onChange={updateState}
+                        placeholder='password'
                     />
                 </div>
                 <div>
-                    <button>Log in!</button>
+                    <button className='auth-button'>Log in!</button>
                 </div>
-                <Link to={'/signup'}>Sign Up</Link>
+                <div className='member'>
+                    <p>Don't have an account? <Link to={'/signup'} className='auth-link'>Sign Up</Link></p>
+                </div>
+
             </form>
         </div>
     );

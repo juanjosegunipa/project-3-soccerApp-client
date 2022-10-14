@@ -25,13 +25,13 @@ function HomePage() {
             )}
             <h1>Soccer pool</h1>
             <h2>In this page you can guess all the results of the soccer World Cup games, the user with the most points wins.</h2>
-            {usersArray.map(e => {
+            {/* {usersArray.map(e => {
                 return (
                     <div>
                         <h2>{e.firstName} {e.lastName} Points: {e.points}</h2>
                     </div>
                 );
-            })}
+            })} */}
 
         </>
     );
